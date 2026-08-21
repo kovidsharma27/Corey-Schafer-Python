@@ -77,7 +77,6 @@
 * Understanding the `.ipynb` file format.
 * Understanding the relationship between kernels, Python environments, and notebooks.
 * Opening and experimenting with an existing Jupyter Notebook.
-```
 
 # Jupyter Notebook Notes
 
@@ -608,4 +607,3 @@ This is one of the main reasons Jupyter is popular for data exploration and rese
 - Notebooks can be exported to formats such as Python and HTML.
 - Existing `.ipynb` notebooks can be downloaded and opened locally.
 - Jupyter is useful for **data exploration, visualization, experimentation, and research**.
-```
