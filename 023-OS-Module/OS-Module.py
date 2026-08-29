@@ -35,6 +35,23 @@ os.removedirs('directory_name') # Will also delete intermidate directories.
 # Safest -> os.makedirs('directory') for creating.
 #        -> os.rmdir('directory') for deleting.
 
+# os.remove() -> deletes a single FILE (not a directory).
+# If the file doesn't exist, it raises a FileNotFoundError.
+# If you try to use it on a directory instead of a file, it raises an IsADirectoryError.
+os.remove('test.txt')
+# Example -> os.remove('test.txt') deletes the file named test.txt from the current directory.
+
+# Comparison: os.remove() vs os.rmdir() vs os.removedirs()
+# os.remove()      -> use this for FILES.
+# os.rmdir()       -> use this for a SINGLE empty directory. Raises OSError if not empty.
+# os.removedirs()  -> use this for an empty directory AND its now-empty parent directories.
+#                      Deletes the target dir, then climbs upward deleting each parent
+#                      directory too, but only as long as each one is empty. Stops as soon
+#                      as it hits a parent that still has something in it.
+# None of these three can delete a NON-EMPTY directory and its contents.
+# (To force-delete a folder with files/subfolders inside, you'd need shutil.rmtree() 
+# from the shutil module — not covered in the os module itself.)
+
 # To rename file or folder in current directory we can do ->
 os.rename('Project.py','Tick_Tak_project.py')
 # os.rename('original_name','new_name')
@@ -55,7 +72,7 @@ print(os.stat('Tick_Tak_project.py').st_mtime) # Output -> 1784245104
 from datetime import datetime
 mod_time = os.stat('Tick_Tak_project.py').st_mtime
 print(datetime.fromtimestamp(mod_time)) # Output -> 2026-08-29 12:06:29.687474
-# os.stat('Tick_Tak_project.py').st_atime will return a timestamp, we will store that in a variable.
+# os.stat('Tick_Tak_project.py').st_mtime will return a timestamp, we will store that in a variable.
 # we will pass that variable in datetime.fromtimestamp(variable) this will convert timestamp to human readable form.
 
 print("Accessed:", datetime.fromtimestamp(os.stat('Tick_Tak_project.py').st_atime))
@@ -152,4 +169,4 @@ print(os.path.splitext('/tem/test.txt'))
 # attributes and methods within the os.path module.
 print(dir(os.path))
 # Output -> ['__all__', '__builtins__', ..., 'basename', 'dirname', 'exists', 'isdir', 'isfile', 
-#            'join', 'split', 'splitext', ...] 
+#            'join', 'split', 'splitext', ...]
