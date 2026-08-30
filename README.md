@@ -33,6 +33,7 @@ Each folder corresponds to one video in the series, containing the practiced `.p
 | 021 | Sorting Lists, Tuples, and Objects | ✅ |
 | 022 | String Formatting | ✅ |
 | 023 | OS Module | ✅ |
+| 024 | Datetime Module | ✅ |
 
 ---
 
@@ -50,8 +51,8 @@ Corey-Schafer-Python/
 │   ├── 003-Numbers.py
 │   └── notes.md
 ...
-├── 023-OS-Module/
-│   ├── 023-OS-Module.py
+├── 024-Datetime-Module/
+│   ├── 024-Datetime-Module.py
 │   └── notes.md
 └── README.md
 ```
