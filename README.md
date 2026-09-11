@@ -34,6 +34,13 @@ Each folder corresponds to one video in the series, containing the practiced `.p
 | 022 | String Formatting | ✅ |
 | 023 | OS Module | ✅ |
 | 024 | Datetime Module | ✅ |
+| 025 | File Objects | ✅ |
+| 026 | Automate Parsing and Renaming | ✅ |
+| 027 | Random Module | ✅ |
+| 028 | CSV Module | ✅ |
+| 029 | CSV to HTML Real World Example | ✅ |
+| 030 | Regex re Module | ✅ |
+| 031 | Try Except Error Handling | ✅ |
 
 ---
 
@@ -51,8 +58,8 @@ Corey-Schafer-Python/
 │   ├── 003-Numbers.py
 │   └── notes.md
 ...
-├── 024-Datetime-Module/
-│   ├── 024-Datetime-Module.py
+├── 031-Try-Except-Error-Handling/
+│   ├── 031-Try-Except-Error-Handling.py
 │   └── notes.md
 └── README.md
 ```
